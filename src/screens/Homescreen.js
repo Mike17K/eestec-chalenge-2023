@@ -15,7 +15,7 @@ const Homescreen = ({ navigation }) => {
       headerRight: () => (
         <TouchableOpacity onPress={() => navigation.navigate('Welcome')} style={{ marginRight: 10 }}>
 
-          <Image source={icon} style={{ width: 30, height: 30, backgroundColor: '#E5E7EB', borderRadius: 20, }} />
+          <Image source={icon} style={{ width: 40, height: 40, backgroundColor: '#E5E7EB', borderRadius: 20, }} />
         </TouchableOpacity>
       ),
     });

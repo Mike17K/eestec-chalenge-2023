@@ -1,5 +1,5 @@
-import { View, Text, Image } from 'react-native';
-import React from 'react';
+import { View, Text, Image , StyleSheet, TouchableOpacity} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
@@ -12,25 +12,38 @@ import profile from '../../assets/user-profile.png';
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
+  
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarActiveTintColor: "black",
+        tabBarActiveTintColor: "white",
         tabBarInactiveTintColor: "gray",
+        tabBarActiveBackgroundColor: "#4e92bf", // green color when active
+        tabBarInactiveBackgroundColor: "#FFFFFF", // white color when inactive
         "display": "flex",
         "tabBarStyle": [
-          {
-
-            height: 70,
-            paddingBottom: 10,
-            paddingTop: 10,
-            borderTopWidth: 0,
-            shadowColor: "#000",
-            shadowOpacity: 0.1,
-            shadowRadius: 10,
-            elevation: 5,
-
-          },
+         {
+          height: 80,
+          borderTopWidth: 0,
+          backgroundColor: 'white',
+          elevation: 0,
+          shadowOpacity: 10,
+          alignItems: 'center',
+          justifyContent: 'center'
+        }],
+        tabBarItemStyle: [{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+         
+        }],
+        tabBarIconStyle:[{
+          width: 35,
+          height: 40,
+          
+          
+        },
           null
         ],
         tabBarIcon: ({ focused, color, size }) => {
@@ -66,13 +79,13 @@ const TabNavigator = () => {
 
         headerStyle: {
 
-          backgroundColor: '#8399a8',
+          backgroundColor: '#4e92bf',
 
         },
         headerTitleStyle: {
           fontWeight: 'bold',
         },
-        headerTintColor: '#000',
+        headerTintColor: 'white',
         headerTitleAlign: 'center'
       }} component={Homescreen} />
 
@@ -81,13 +94,13 @@ const TabNavigator = () => {
 
         headerStyle: {
 
-          backgroundColor: '#8399a8',
+          backgroundColor: '#4e92bf',
 
         },
         headerTitleStyle: {
           fontWeight: 'bold',
         },
-        headerTintColor: '#000',
+        headerTintColor: 'white',
         headerTitleAlign: 'center'
       }} component={Profilescreen} />
 
