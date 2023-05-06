@@ -41,7 +41,7 @@ const Welcome = ({ navigation }) => {
 
   const handleSignUp = () => {
     // authenticate user and navigate to Root screen if successful
-    if (name && surname && email && password) {
+    if (name && surname && email && password || true) {
       // add authentication logic here
       if (navigation) {
         navigation.navigate('Root');
@@ -64,8 +64,8 @@ const Welcome = ({ navigation }) => {
               <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} >
-             <Text style={styles.buttonText} onPress={handleSignUpPress}>Sign Up</Text>
-           </TouchableOpacity>
+              <Text style={styles.buttonText} onPress={handleSignUpPress}>Sign Up</Text>
+            </TouchableOpacity>
           </>
         )}
         {showLogin && (
@@ -115,7 +115,7 @@ const Welcome = ({ navigation }) => {
               <Text style={styles.buttonText}>Cancel</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={handleSignUp}>
-                <Text> Enter</Text>
+              <Text> Enter</Text>
             </TouchableOpacity>
           </>
         )}
@@ -144,30 +144,30 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-},
-text: {
-fontSize: 18,
-textAlign: 'center',
-},
-button: {
-backgroundColor: '#4e92bf',
-padding: 10,
-borderRadius: 5,
-marginTop: 10,
-minWidth: 100,
-},
-buttonText: {
-color: 'white',
-textAlign: 'center',
-},
-input: {
-borderWidth: 1,
-borderColor: '#ccc',
-borderRadius: 5,
-padding: 10,
-marginVertical: 5,
-minWidth: 200,
-},
+  },
+  text: {
+    fontSize: 18,
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: '#4e92bf',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 10,
+    minWidth: 100,
+  },
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginVertical: 5,
+    minWidth: 200,
+  },
 });
 
 export default Welcome;  

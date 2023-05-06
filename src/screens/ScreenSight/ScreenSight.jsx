@@ -17,20 +17,28 @@ const ScreenSight = ({ route }) => {
   return (
     <View style={styles.container}>
       <View style={styles.wrapper}>
-        <View style={styles.logo}>
-          <Text>Logo</Text>
+        <View>
+          <Image
+            source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+            style={{ width: 50, height: 50 }}
+          />
         </View>
         <View style={styles.user}>
-          <Text>user</Text>
+          <Image
+            source={{
+              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGyMudvVSHtlg8gKvQb0vRZsoqgqinzqekGcnBP2l&s",
+            }}
+            style={{ width: 50, height: 50, borderRadius: 50 / 2 }}
+          />
         </View>
       </View>
 
-      <View style={styles.sightTitle}>
-        <Text>{shightTitle}</Text>
+      <View>
+        <Text style={styles.sightTitle}>{shightTitle}</Text>
       </View>
 
-      <View style={styles.discription}>
-        <Text>{discription}</Text>
+      <View>
+        <Text style={styles.discription}>{discription}</Text>
       </View>
 
       <View style={styles.imagesslider}>
@@ -64,11 +72,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   wrapper: {
+    top: 40,
+    padding: 20,
     width: "100%",
     height: "10%",
-    backgroundColor: "red",
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
   },
   imagesslider: {
     width: "100%",
@@ -97,8 +106,18 @@ const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
+
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
+  },
+  sightTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  discription: {
+    padding: 20,
+    fontSize: 15,
+    fontWeight: "normal",
   },
 });
 

@@ -1,5 +1,5 @@
 import { View, Text, Image } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
@@ -11,7 +11,9 @@ import profile from '../../assets/user-profile.png';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
+const TabNavigator = ({ route }) => {
+  let redirect = route.name === 'ScreenSight' ? true : false;
+
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -90,6 +92,7 @@ const TabNavigator = () => {
         headerTintColor: '#000',
         headerTitleAlign: 'center'
       }} component={Profilescreen} />
+
 
     </Tab.Navigator>
   );

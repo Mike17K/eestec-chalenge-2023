@@ -26,8 +26,9 @@ const Kartela = ({
     { src: 'https://i.imgur.com/2nCt3Sbl.jpg' }
   ]
 
+  const discription = "Nestled in the heart of the forest, this cozy cabin offers a serene retreat from the hustle and bustle of everyday life. Surrounded by towering trees and the sounds of nature, this tranquil getaway is the perfect escape for those seeking relaxation and rejuvenation. With its rustic charm and modern amenities, the cabin is a haven of comfort and convenience. Take in the stunning views from the spacious deck, or snuggle up by the fireplace with a good book. Whether you're seeking adventure or simply a peaceful retreat, this place is the perfect destination for your next getaway."
   return (
-    <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('ScreenSight', { discription: "discription . . .", shightTitle: "lol", images: urls })}>
+    <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('ScreenSight', { discription: discription, shightTitle: "Event", images: urls })}>
       <Image source={Eikona} style={styles.image} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
