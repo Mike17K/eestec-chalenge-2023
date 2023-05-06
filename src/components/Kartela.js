@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity , Image, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native'
 import React from 'react'
 
 const star = require("../../assets/star.png");
@@ -6,18 +6,28 @@ const loc = require("../../assets/location-pin.png");
 const Eikona = require("../../assets/372551.jpg");
 
 const Kartela = ({
-    id, 
-    title,
-    rating,
-    genre,
-    address,
-    short_description,
-    dishes,
-    long,
-    lat,
+  id,
+  title,
+  rating,
+  genre,
+  address,
+  short_description,
+  dishes,
+  long,
+  lat,
+  navigation
 }) => {
+
+  urls = [
+    { src: 'https://i.imgur.com/UYiroysl.jpg' },
+    { src: 'https://i.imgur.com/UPrs1EWl.jpg' },
+    { src: 'https://i.imgur.com/MABUbpDl.jpg' },
+    { src: 'https://i.imgur.com/KZsmUi2l.jpg' },
+    { src: 'https://i.imgur.com/2nCt3Sbl.jpg' }
+  ]
+
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('ScreenSight', { discription: "discription . . .", shightTitle: "lol", images: urls })}>
       <Image source={Eikona} style={styles.image} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>

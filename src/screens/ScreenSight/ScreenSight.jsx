@@ -4,23 +4,12 @@ import MapView from "react-native-maps";
 
 /**
  Syntax for using this component
-  const urls = [
-    { src: 'https://i.imgur.com/UYiroysl.jpg' },
-    { src: 'https://i.imgur.com/UPrs1EWl.jpg' },
-    { src: 'https://i.imgur.com/MABUbpDl.jpg' },
-    { src: 'https://i.imgur.com/KZsmUi2l.jpg' },
-    { src: 'https://i.imgur.com/2nCt3Sbl.jpg' },
-    { src: 'https://i.imgur.com/lceHsT6l.jpg' },
-    { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-    { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-    { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-    { src: 'https://i.imgur.com/0M82nEIl.jpg' }
-  ];
-  <ScreenSight discription={"discription . . ."} shightTitle={"lol"} images={urls} />
     
 */
 
-const ScreenSight = ({ discription, shightTitle, images }) => {
+const ScreenSight = ({ route }) => {
+  const { discription, shightTitle, images } = route.params;
+
   const renderItem = ({ item }) => (
     <Image source={{ uri: item.src }} style={styles.image} />
   );
