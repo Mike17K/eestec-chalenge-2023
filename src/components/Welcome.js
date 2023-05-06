@@ -46,7 +46,7 @@ const Welcome = ({ navigation }) => {
 
   const handleSignUp = () => {
     // authenticate user and navigate to Root screen if successful
-    if (name && surname && email && password || true) {
+    if (name && email && password || true) {
       // add authentication logic here
       if (navigation) {
         navigation.navigate('Root');
@@ -91,6 +91,13 @@ const Welcome = ({ navigation }) => {
         <View style={styles.content}>
           {!showLogin && !showSignUp && (
             <>
+              <View style={styles.spinnerContainer}>
+                <Text style={styles.spinnerText}>Get ready..</Text>
+                <Animated.Image
+                  source={require('../../assets/earth.png')}
+                  style={[styles.spinner, { transform: [{ rotate: spinnerRotation }] }]}
+                />
+              </View>
               <Text style={styles.text}>Explore, Interact, Play!</Text>
               <TouchableOpacity style={styles.button} onPress={handleLoginPress}>
                 <Text style={styles.buttonText}>Login</Text>
@@ -100,13 +107,6 @@ const Welcome = ({ navigation }) => {
               </TouchableOpacity>
             </>
           )}
-          <View style={styles.spinnerContainer}>
-            <Text style={styles.spinnerText}>Get ready..</Text>
-            <Animated.Image
-              source={require('../../assets/earth.png')}
-              style={[styles.spinner, { transform: [{ rotate: spinnerRotation }] }]}
-            />
-          </View>
           {showLogin && (
             <>
               <Text style={styles.text}>Login</Text>
@@ -146,11 +146,11 @@ const Welcome = ({ navigation }) => {
                 secureTextEntry
                 onChangeText={handlePasswordChange}
               />
+              <TouchableOpacity style={styles.button} onPress={handleSignUp}>
+                <Text style={styles.buttonText}> Enter</Text>
+              </TouchableOpacity>
               <TouchableOpacity style={styles.button} onPress={() => setShowSignUp(false)}>
                 <Text style={styles.buttonText}>Cancel</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.button} onPress={handleSignUp}>
-                <Text> Enter</Text>
               </TouchableOpacity>
             </>
           )}

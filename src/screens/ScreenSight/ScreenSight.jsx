@@ -14,19 +14,21 @@ const ScreenSight = ({ route }) => {
     <Image source={{ uri: item.src }} style={styles.image} />
   );
 
+  const user = {
+    // beautiful image girl
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1oZaYZwK986pwWVCtfpZjEQIfs7mC_3nhrQ&usqp=CAU",
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.wrapper}>
+      <View style={{ ...styles.wrapper, marginTop: 60 }}>
         <View>
-          <Image
-            source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
-            style={{ width: 50, height: 50 }}
-          />
+          <View style={{ width: 100, height: 20 }} />
         </View>
         <View style={styles.user}>
           <Image
             source={{
-              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGyMudvVSHtlg8gKvQb0vRZsoqgqinzqekGcnBP2l&s",
+              uri: user.src,
             }}
             style={{ width: 50, height: 50, borderRadius: 50 / 2 }}
           />

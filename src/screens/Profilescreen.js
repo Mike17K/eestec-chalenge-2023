@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
 const Profilescreen = () => {
   const user = {
     // beautiful image girl
-    src: 'https://i.imgur.com/UYiroysl.jpg',
+    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1oZaYZwK986pwWVCtfpZjEQIfs7mC_3nhrQ&usqp=CAU',
   }
   const users = [
     {
@@ -135,9 +135,9 @@ const Profilescreen = () => {
         <Text style={{ fontSize: 25, color: 'white', marginTop: 20 }}>Every thing is                            </Text>
         <Text style={{ fontSize: 25, color: 'white', marginTop: 5 }}>about <Text style={{ fontSize: 30, color: 'red', marginTop: 5 }}>You</Text>            </Text>
         <View class={"profile-pic"} style={{ marginTop: 10, marginBottom: 10, borderRadius: 50 }}>
-          <Image source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGyMudvVSHtlg8gKvQb0vRZsoqgqinzqekGcnBP2l&s" }}
+          <Image source={{ uri: user.src }}
             style={{
-              width: 180, height: 180, borderRadius: 180 / 2, borderColor: 'black', borderWidth: 4
+              width: 220, height: 220, borderRadius: 220 / 2, borderColor: 'black', borderWidth: 4
             }} />
         </View>
         <Text style={{ fontSize: 25, color: 'white', marginTop: 5 }}>And the people               </Text>

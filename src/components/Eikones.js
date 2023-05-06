@@ -26,8 +26,8 @@ const Eikones = ({ id, title, description, navigation, ...params }) => {
       >
         {/* RestaurantCard*/}
         {
-          params.locations.map((eikona) => (
-            <Kartela {...eikona} navigation={navigation} />
+          params.locations.map((eikona, index) => (
+            <Kartela key={index} {...eikona} navigation={navigation} />
           ))
 
         }

@@ -31,7 +31,7 @@ const Homescreen = ({ navigation }) => {
       locations: [
         {
           id: 123,
-          ImageSource: 'https://i.imgur.com/UYiroysl.jpg',
+          ImageSource: 'https://i.imgur.com/UPrs1EWl.jpg',
           title: "Athina",
           rating: 4.5,
           genre: "japanese",
@@ -41,17 +41,17 @@ const Homescreen = ({ navigation }) => {
           lat: 0,
           eikones: [
             { src: 'https://i.imgur.com/UYiroysl.jpg' },
-            { src: 'https://i.imgur.com/UPrs1EWl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' }
+            { key: 0, src: 'https://i.imgur.com/UPrs1EWl.jpg' },
+            { key: 1, src: 'https://i.imgur.com/0M82nEIl.jpg' },
+            { key: 2, src: 'https://i.imgur.com/0M82nEIl.jpg' },
+            { key: 3, src: 'https://i.imgur.com/0M82nEIl.jpg' }
           ]
 
         },
         {
 
-          id: 123,
-          ImageSource: 'https://i.imgur.com/UYiroysl.jpg',
+          id: 124,
+          ImageSource: 'https://i.imgur.com/0M82nEIl.jpg',
           title: "Athina",
           rating: 4.5,
           genre: "japanese",
@@ -60,11 +60,10 @@ const Homescreen = ({ navigation }) => {
           long: 20,
           lat: 0,
           eikones: [
-            { src: 'https://i.imgur.com/UYiroysl.jpg' },
-            { src: 'https://i.imgur.com/UPrs1EWl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' }
+            { key: 0, src: 'https://i.imgur.com/UPrs1EWl.jpg' },
+            { key: 1, src: 'https://i.imgur.com/0M82nEIl.jpg' },
+            { key: 2, src: 'https://i.imgur.com/0M82nEIl.jpg' },
+            { key: 3, src: 'https://i.imgur.com/0M82nEIl.jpg' }
           ]
 
         }
@@ -79,8 +78,8 @@ const Homescreen = ({ navigation }) => {
       description: "Kentriki ellada",
       locations: [
         {
-          id: 123,
-          ImageSource: 'https://i.imgur.com/UYiroysl.jpg',
+          id: 125,
+          ImageSource: 'https://i.imgur.com/0M82nEIl.jpg',
           title: "Athina",
           rating: 4.5,
           genre: "japanese",
@@ -89,18 +88,18 @@ const Homescreen = ({ navigation }) => {
           long: 20,
           lat: 0,
           eikones: [
-            { src: 'https://i.imgur.com/UYiroysl.jpg' },
-            { src: 'https://i.imgur.com/UPrs1EWl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' }
+            { key: 0, src: 'https://i.imgur.com/UYiroysl.jpg' },
+            { key: 1, src: 'https://i.imgur.com/UPrs1EWl.jpg' },
+            { key: 2, src: 'https://i.imgur.com/0M82nEIl.jpg' },
+            { key: 3, src: 'https://i.imgur.com/0M82nEIl.jpg' },
+            { key: 4, src: 'https://i.imgur.com/0M82nEIl.jpg' }
           ]
 
         },
         {
 
-          id: 123,
-          ImageSource: 'https://i.imgur.com/UYiroysl.jpg',
+          id: 126,
+          ImageSource: 'https://i.imgur.com/0M82nEIl.jpg',
           title: "Athina",
           rating: 4.5,
           genre: "japanese",
@@ -109,11 +108,11 @@ const Homescreen = ({ navigation }) => {
           long: 20,
           lat: 0,
           eikones: [
-            { src: 'https://i.imgur.com/UYiroysl.jpg' },
-            { src: 'https://i.imgur.com/UPrs1EWl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' },
-            { src: 'https://i.imgur.com/0M82nEIl.jpg' }
+            { key: 0, src: 'https://i.imgur.com/UYiroysl.jpg' },
+            { key: 1, src: 'https://i.imgur.com/UPrs1EWl.jpg' },
+            { key: 2, src: 'https://i.imgur.com/0M82nEIl.jpg' },
+            { key: 3, src: 'https://i.imgur.com/0M82nEIl.jpg' },
+            { key: 4, src: 'https://i.imgur.com/0M82nEIl.jpg' }
           ]
 
         }
@@ -128,8 +127,8 @@ const Homescreen = ({ navigation }) => {
 
       <ScrollView>
         {
-          locations.map((location) =>
-            <Eikones {...location} navigation={navigation} />
+          locations.map((location, index) =>
+            <Eikones key={index} {...location} navigation={navigation} />
           )
         }
       </ScrollView>
