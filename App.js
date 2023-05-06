@@ -1,12 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { app } from './src/database/database';
+import ScreenSight from './src/screens/ScreenSight/ScreenSight';
+//import Config from 'react-native-config';
 
 export default function App() {
+  const urls = [
+    'https://i.imgur.com/UYiroysl.jpg',
+    'https://i.imgur.com/UPrs1EWl.jpg',
+    'https://i.imgur.com/MABUbpDl.jpg',
+    'https://i.imgur.com/KZsmUi2l.jpg'
+  ];
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <ScreenSight images={urls} />
+    </SafeAreaView>
   );
 }
 
@@ -16,5 +24,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });
