@@ -5,15 +5,21 @@ import ScreenSight from './src/screens/ScreenSight/ScreenSight';
 
 export default function App() {
   const urls = [
-    'https://i.imgur.com/UYiroysl.jpg',
-    'https://i.imgur.com/UPrs1EWl.jpg',
-    'https://i.imgur.com/MABUbpDl.jpg',
-    'https://i.imgur.com/KZsmUi2l.jpg'
+    { src: 'https://i.imgur.com/UYiroysl.jpg' },
+    { src: 'https://i.imgur.com/UPrs1EWl.jpg' },
+    { src: 'https://i.imgur.com/MABUbpDl.jpg' },
+    { src: 'https://i.imgur.com/KZsmUi2l.jpg' },
+    { src: 'https://i.imgur.com/2nCt3Sbl.jpg' },
+    { src: 'https://i.imgur.com/lceHsT6l.jpg' },
+    { src: 'https://i.imgur.com/0M82nEIl.jpg' },
+    { src: 'https://i.imgur.com/0M82nEIl.jpg' },
+    { src: 'https://i.imgur.com/0M82nEIl.jpg' },
+    { src: 'https://i.imgur.com/0M82nEIl.jpg' },
   ];
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ScreenSight images={urls} />
+      <ScreenSight discription={"discription . . ."} shightTitle={"lol"} images={urls} />
     </SafeAreaView>
   );
 }
